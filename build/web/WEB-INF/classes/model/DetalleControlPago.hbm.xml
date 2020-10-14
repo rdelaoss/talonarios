@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.DetalleControlPago" table="DetalleControlPago" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="detalleControlPagoId" type="int">
+            <column name="DetalleControlPagoId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="controlPago" class="model.ControlPago" fetch="select">
+            <column name="ControlPagoId" not-null="true" />
+        </many-to-one>
+        <property name="detalleControlPagoAbono" type="big_decimal">
+            <column name="DetalleControlPagoAbono" precision="18" scale="4" not-null="true" />
+        </property>
+        <property name="detalleControlPagoAbonoFechaHora" type="timestamp">
+            <column name="DetalleControlPagoAbonoFechaHora" length="23" not-null="true" />
+        </property>
+        <property name="detalleControlPagoEnColegio" type="boolean">
+            <column name="DetalleControlPagoEnColegio" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

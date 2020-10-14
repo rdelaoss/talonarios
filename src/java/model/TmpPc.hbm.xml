@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.TmpPc" table="tmpPC" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="codPc" type="int">
+            <column name="codPC" />
+            <generator class="assigned" />
+        </id>
+        <property name="userId" type="serializable">
+            <column name="UserId" />
+        </property>
+        <property name="mensualidad" type="serializable">
+            <column name="Mensualidad" />
+        </property>
+        <property name="cantidad" type="java.lang.Long">
+            <column name="Cantidad" precision="18" scale="0" />
+        </property>
+        <property name="controlPagoId" type="java.lang.Integer">
+            <column name="ControlPagoId" />
+        </property>
+        <property name="fecha" type="date">
+            <column name="Fecha" length="10" />
+        </property>
+    </class>
+</hibernate-mapping>

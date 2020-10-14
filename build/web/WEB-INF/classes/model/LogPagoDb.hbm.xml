@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.LogPagoDb" table="LogPagoDB" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="logPagoDbid" type="int">
+            <column name="LogPagoDBid" />
+            <generator class="assigned" />
+        </id>
+        <property name="usuarioId" type="int">
+            <column name="UsuarioId" not-null="true" />
+        </property>
+        <property name="controlPagoId" type="int">
+            <column name="ControlPagoId" not-null="true" />
+        </property>
+        <property name="logPagoFechaHora" type="timestamp">
+            <column name="LogPagoFechaHora" length="23" not-null="true" />
+        </property>
+        <property name="logPagoValorInicial" type="big_decimal">
+            <column name="LogPagoValorInicial" precision="18" not-null="true" />
+        </property>
+        <property name="logPagoValorIntroducido" type="big_decimal">
+            <column name="LogPagoValorIntroducido" precision="18" not-null="true" />
+        </property>
+        <property name="logPagoValorNuevo" type="big_decimal">
+            <column name="LogPagoValorNuevo" precision="18" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

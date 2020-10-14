@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.ControlPago" table="ControlPago" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="controlPagoId" type="int">
+            <column name="ControlPagoId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="arancel" class="model.Arancel" fetch="select">
+            <column name="ArancelId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="estadoControlPago" class="model.EstadoControlPago" fetch="select">
+            <column name="EstadoControlPagoId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="matricula" class="model.Matricula" fetch="select">
+            <column name="MatriculaId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="model.Usuario" fetch="select">
+            <column name="ControlPagoUsuarioId" not-null="true" />
+        </many-to-one>
+        <property name="controlPagoFechaIngresoPago" type="timestamp">
+            <column name="ControlPagoFechaIngresoPago" length="23" not-null="true" />
+        </property>
+        <property name="controlPagoArancelAsignado" type="big_decimal">
+            <column name="ControlPagoArancelAsignado" precision="18" />
+        </property>
+        <property name="controlPagoArancelPagado" type="big_decimal">
+            <column name="ControlPagoArancelPagado" precision="18" />
+        </property>
+        <property name="controlPagoPagadoEnColegio" type="boolean">
+            <column name="ControlPagoPagadoEnColegio" not-null="true" />
+        </property>
+        <property name="controlPagoMora" type="boolean">
+            <column name="ControlPagoMora" not-null="true" />
+        </property>
+        <property name="controlPagoObservacion" type="serializable">
+            <column name="ControlPagoObservacion" not-null="true" />
+        </property>
+        <property name="controlPagoActivo" type="boolean">
+            <column name="ControlPagoActivo" not-null="true" />
+        </property>
+        <property name="controlPagoFechaModificacion" type="timestamp">
+            <column name="ControlPagoFechaModificacion" length="23" not-null="true" />
+        </property>
+        <set name="cambiosArancels" table="CambiosArancel" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ControlPagoId" not-null="true" />
+            </key>
+            <one-to-many class="model.CambiosArancel" />
+        </set>
+        <set name="detalleControlReversions" table="DetalleControlReversion" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ControlPagoId" not-null="true" />
+            </key>
+            <one-to-many class="model.DetalleControlReversion" />
+        </set>
+        <set name="detalleControlPagos" table="DetalleControlPago" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ControlPagoId" not-null="true" />
+            </key>
+            <one-to-many class="model.DetalleControlPago" />
+        </set>
+        <set name="detalleAsignacionCuotas" table="DetalleAsignacionCuota" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ControlPagoId" not-null="true" />
+            </key>
+            <one-to-many class="model.DetalleAsignacionCuota" />
+        </set>
+    </class>
+</hibernate-mapping>

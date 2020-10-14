@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.DetalleControlReversion" table="DetalleControlReversion" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="detalleControlReversionId" type="int">
+            <column name="DetalleControlReversionId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="controlPago" class="model.ControlPago" fetch="select">
+            <column name="ControlPagoId" not-null="true" />
+        </many-to-one>
+        <property name="detalleControlReversionPagoAnterior" type="big_decimal">
+            <column name="DetalleControlReversionPagoAnterior" precision="18" scale="4" not-null="true" />
+        </property>
+        <property name="detalleControlReversionPagoNuevo" type="big_decimal">
+            <column name="DetalleControlReversionPagoNuevo" precision="18" scale="4" not-null="true" />
+        </property>
+        <property name="detalleControlReversionFechaHora" type="timestamp">
+            <column name="DetalleControlReversionFechaHora" length="23" not-null="true" />
+        </property>
+        <property name="detalleControlReversionPagoEnColegio" type="boolean">
+            <column name="DetalleControlReversionPagoEnColegio" not-null="true" />
+        </property>
+        <property name="detalleControlReversionPagoObservacion" type="string">
+            <column name="DetalleControlReversionPagoObservacion" length="500" not-null="true" />
+        </property>
+        <property name="detalleControlReversionPagoActivo" type="boolean">
+            <column name="DetalleControlReversionPagoActivo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

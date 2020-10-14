@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.CambiosArancel" table="CambiosArancel" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="cambiosArancelesId" type="int">
+            <column name="CambiosArancelesId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="controlPago" class="model.ControlPago" fetch="select">
+            <column name="ControlPagoId" not-null="true" />
+        </many-to-one>
+        <property name="cambiosArancelValorInicial" type="big_decimal">
+            <column name="CambiosArancelValorInicial" precision="18" not-null="true" />
+        </property>
+        <property name="cambiosArancelValorFinal" type="big_decimal">
+            <column name="CambiosArancelValorFinal" precision="18" not-null="true" />
+        </property>
+        <property name="cambiosArancelObservaci&#243;n" type="serializable">
+            <column name="CambiosArancelObservaci&#243;n" not-null="true" />
+        </property>
+        <property name="cambiosArancelFechaModificacion" type="timestamp">
+            <column name="CambiosArancelFechaModificacion" length="23" not-null="true" />
+        </property>
+        <property name="cambiosArancelFechaModificacionActivo" type="boolean">
+            <column name="CambiosArancelFechaModificacionActivo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

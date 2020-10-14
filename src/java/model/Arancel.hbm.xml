@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Arancel" table="Arancel" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="arancelId" type="int">
+            <column name="ArancelId" />
+            <generator class="assigned" />
+        </id>
+        <property name="cod" type="serializable">
+            <column name="Cod" />
+        </property>
+        <property name="arancelNombre" type="serializable">
+            <column name="ArancelNombre" not-null="true" />
+        </property>
+        <property name="arancelAlias" type="serializable">
+            <column name="ArancelAlias" />
+        </property>
+        <property name="arancelMostrarInforme" type="java.lang.Boolean">
+            <column name="ArancelMostrarInforme" />
+        </property>
+        <property name="arancelActivo" type="boolean">
+            <column name="ArancelActivo" not-null="true" />
+        </property>
+        <property name="arancelFechaModificacion" type="timestamp">
+            <column name="ArancelFechaModificacion" length="23" not-null="true" />
+        </property>
+        <set name="arancelMatriculas" table="ArancelMatricula" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ArancelId" not-null="true" />
+            </key>
+            <one-to-many class="model.ArancelMatricula" />
+        </set>
+        <set name="controlPagos" table="ControlPago" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ArancelId" not-null="true" />
+            </key>
+            <one-to-many class="model.ControlPago" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.NivelEstudio" table="NivelEstudio" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="nivelEstudioId" type="int">
+            <column name="NivelEstudioId" />
+            <generator class="assigned" />
+        </id>
+        <property name="nivelEstudioNombre" type="serializable">
+            <column name="NivelEstudioNombre" not-null="true" />
+        </property>
+        <property name="nivelEstudioActivo" type="boolean">
+            <column name="NivelEstudioActivo" not-null="true" />
+        </property>
+        <property name="nivelEstudioFechaModificacion" type="timestamp">
+            <column name="NivelEstudioFechaModificacion" length="23" not-null="true" />
+        </property>
+        <set name="grados" table="Grado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="NivelEstudioId" not-null="true" />
+            </key>
+            <one-to-many class="model.Grado" />
+        </set>
+    </class>
+</hibernate-mapping>

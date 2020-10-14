@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.InstitucionParametro" table="InstitucionParametro" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="institucionParametroId" type="int">
+            <column name="InstitucionParametroId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="anioLectivo" class="model.AnioLectivo" fetch="select">
+            <column name="AnioLectivoActiviId" not-null="true" />
+        </many-to-one>
+        <property name="institucionParametroNombre" type="serializable">
+            <column name="InstitucionParametroNombre" not-null="true" />
+        </property>
+        <property name="institucionParametroDireccion" type="serializable">
+            <column name="InstitucionParametroDireccion" not-null="true" />
+        </property>
+        <property name="institucionParametroUrlLogo" type="serializable">
+            <column name="InstitucionParametroUrlLogo" not-null="true" />
+        </property>
+        <property name="institucionParametroActivo" type="boolean">
+            <column name="InstitucionParametroActivo" not-null="true" />
+        </property>
+        <property name="institucionParametroFechaModificacion" type="timestamp">
+            <column name="InstitucionParametroFechaModificacion" length="23" not-null="true" />
+        </property>
+        <property name="institucionUrlReporte" type="serializable">
+            <column name="InstitucionUrlReporte" />
+        </property>
+    </class>
+</hibernate-mapping>

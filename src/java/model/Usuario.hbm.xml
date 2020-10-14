@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Usuario" table="Usuario" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="usuarioId" type="int">
+            <column name="UsuarioId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="persona" class="model.Persona" fetch="select">
+            <column name="PersonaId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="rol" class="model.Rol" fetch="select">
+            <column name="RolId" not-null="true" />
+        </many-to-one>
+        <property name="usuarioNombre" type="serializable">
+            <column name="UsuarioNombre" not-null="true" />
+        </property>
+        <property name="usuarioPassword" type="serializable">
+            <column name="UsuarioPassword" not-null="true" />
+        </property>
+        <property name="usuarioActivo" type="boolean">
+            <column name="UsuarioActivo" not-null="true" />
+        </property>
+        <property name="usuarioFechaModificacion" type="timestamp">
+            <column name="UsuarioFechaModificacion" length="23" not-null="true" />
+        </property>
+        <set name="detalleAsignacionCuotas" table="DetalleAsignacionCuota" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UsuarioId" not-null="true" />
+            </key>
+            <one-to-many class="model.DetalleAsignacionCuota" />
+        </set>
+        <set name="arancelMatriculas" table="ArancelMatricula" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="UsuarioId" not-null="true" />
+            </key>
+            <one-to-many class="model.ArancelMatricula" />
+        </set>
+        <set name="controlPagos" table="ControlPago" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="ControlPagoUsuarioId" not-null="true" />
+            </key>
+            <one-to-many class="model.ControlPago" />
+        </set>
+    </class>
+</hibernate-mapping>

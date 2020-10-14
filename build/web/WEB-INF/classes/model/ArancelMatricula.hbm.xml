@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.ArancelMatricula" table="ArancelMatricula" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="arancelMatriculaId" type="int">
+            <column name="ArancelMatriculaId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="arancel" class="model.Arancel" fetch="select">
+            <column name="ArancelId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="matricula" class="model.Matricula" fetch="select">
+            <column name="MatriculaId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="model.Usuario" fetch="select">
+            <column name="UsuarioId" not-null="true" />
+        </many-to-one>
+        <property name="arancelValorInicial" type="big_decimal">
+            <column name="ArancelValorInicial" precision="18" not-null="true" />
+        </property>
+        <property name="arancelValorActual" type="big_decimal">
+            <column name="ArancelValorActual" precision="18" not-null="true" />
+        </property>
+        <property name="arancelFechaCrea" type="timestamp">
+            <column name="ArancelFechaCrea" length="23" not-null="true" />
+        </property>
+        <property name="arancelFechaModificacion" type="timestamp">
+            <column name="ArancelFechaModificacion" length="23" not-null="true" />
+        </property>
+        <property name="arancelMatriculaActivo" type="boolean">
+            <column name="ArancelMatriculaActivo" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

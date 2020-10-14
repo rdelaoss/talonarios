@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.DetalleAsignacionCuota" table="DetalleAsignacionCuota" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="detalleAsginacionCuotaId" type="int">
+            <column name="DetalleAsginacionCuotaId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="controlPago" class="model.ControlPago" fetch="select">
+            <column name="ControlPagoId" not-null="true" />
+        </many-to-one>
+        <many-to-one name="usuario" class="model.Usuario" fetch="select">
+            <column name="UsuarioId" not-null="true" />
+        </many-to-one>
+        <property name="detalleAsignacionCuotaAnterior" type="big_decimal">
+            <column name="DetalleAsignacionCuotaAnterior" precision="18" not-null="true" />
+        </property>
+        <property name="detalleAsignacionCuotaNueva" type="big_decimal">
+            <column name="DetalleAsignacionCuotaNueva" precision="18" not-null="true" />
+        </property>
+        <property name="detalleAsignacionCuotaObservacion" type="serializable">
+            <column name="DetalleAsignacionCuotaObservacion" not-null="true" />
+        </property>
+        <property name="detalleAsignacionCuotaActivo" type="boolean">
+            <column name="DetalleAsignacionCuotaActivo" not-null="true" />
+        </property>
+        <property name="detalleAsignacionCuotaFecha" type="timestamp">
+            <column name="DetalleAsignacionCuotaFecha" length="23" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

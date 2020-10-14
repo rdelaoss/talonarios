@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-10-2020 10:11:53 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="model.Grado" table="Grado" schema="dbo" catalog="Mora2020" optimistic-lock="version">
+        <id name="gradoId" type="int">
+            <column name="GradoId" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="nivelEstudio" class="model.NivelEstudio" fetch="select">
+            <column name="NivelEstudioId" not-null="true" />
+        </many-to-one>
+        <property name="gradoNombre" type="serializable">
+            <column name="GradoNombre" not-null="true" />
+        </property>
+        <property name="gradoActivo" type="boolean">
+            <column name="GradoActivo" not-null="true" />
+        </property>
+        <property name="gradoFechaModificacion" type="timestamp">
+            <column name="GradoFechaModificacion" length="23" not-null="true" />
+        </property>
+        <set name="configuracionGrados" table="ConfiguracionGrado" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="GradoId" not-null="true" />
+            </key>
+            <one-to-many class="model.ConfiguracionGrado" />
+        </set>
+    </class>
+</hibernate-mapping>

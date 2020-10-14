@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e52eb574-7eae-4008-9bd1-1ca2e9495462">
+	<property name="ireport.zoom" value="2.357947691000006"/>
+	<property name="ireport.x" value="597"/>
+	<property name="ireport.y" value="273"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="22" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="25" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="24" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="427" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="86" height="12" uuid="da98c629-4578-4d72-b287-ae13abd4f328"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[COLEGIO PADRE ARRUPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="117" y="10" width="113" height="12" uuid="84ddc166-ec85-4363-83cd-f8397a36bf1f"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRACION ACADEMICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="27" width="58" height="12" uuid="7d544556-d1e0-41c5-a1d9-f6ac3e39b6a0"/>
+				<textElement>
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRICULA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="44" width="99" height="14" uuid="8d7eee4b-ba04-4c52-b2cd-8eefa42f5831"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[CODIGO DE COLECTOR 3051]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="128" y="45" width="24" height="13" uuid="f0203e5f-166b-45bf-a947-55536acec723"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[AÑO :]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="10" y="58" width="220" height="121" uuid="0e553ae6-65c5-44e4-82c3-33df10c6f4d5"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<image>
+					<reportElement x="66" y="13" width="82" height="105" uuid="47125980-8902-412f-b2ce-3e405ef04ba6"/>
+					<imageExpression><![CDATA["C:\\NetBeans_JSFv1.0\\NetbeansProject\\CodBar\\web\\resources\\images\\arrupebw.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="3" y="1" width="44" height="15" uuid="885fc2e7-6586-4402-8a09-1807b52bea00"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APELLIDOS :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="21" width="220" height="1" uuid="e614deb0-8c4d-4214-a12f-a0d7f58eff0f"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="23" width="43" height="11" uuid="a8fb902e-2c57-4a30-a6ea-175ee5d1f6f7"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NOMBRES: ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="42" width="220" height="1" uuid="672f885b-146c-4fdc-8d80-0e999d690ea9"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="43" width="43" height="12" uuid="70108397-5a8c-455c-8cf8-6f5e8dee0ca0"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CURSO :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="62" width="220" height="1" uuid="fad32c6e-6d1a-4850-bc4b-5c02e097b9c0"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="68" width="43" height="12" uuid="fb463862-5d23-4625-b74b-415286454ef5"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[CUOTA :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="4" y="86" width="43" height="12" uuid="c70b4674-2c12-46dc-ab0f-a5057cdb4c7c"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[RECARGO :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="103" width="59" height="10" uuid="209cf6b2-ab41-43a5-9fa8-2ae8278aa611"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[TOTAL A PAGAR :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="163" y="63" width="1" height="58" uuid="0ea4fff4-9a65-468b-a124-471b654b35ff"/>
+				</line>
+				<line>
+					<reportElement x="49" y="74" width="99" height="1" uuid="ea7aa958-eb5c-4366-bf12-f2eeab4418bf"/>
+				</line>
+				<staticText>
+					<reportElement x="156" y="68" width="7" height="12" uuid="20a66134-c98f-4273-a16c-2bba702bd061"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="156" y="86" width="7" height="12" uuid="b5ce97c2-d426-428e-8c0d-bf0076b571aa"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+				<line>
+					<reportElement x="49" y="91" width="99" height="1" uuid="9d672e65-3abb-4d26-85e6-34c5f8254081"/>
+				</line>
+				<line>
+					<reportElement x="68" y="108" width="80" height="1" uuid="538e0f31-f62d-4a73-955c-beea60b2de7e"/>
+				</line>
+				<line>
+					<reportElement x="164" y="82" width="56" height="1" uuid="ef4764c0-4ba2-4768-9130-2a4bcfd10d1f"/>
+				</line>
+				<line>
+					<reportElement x="164" y="101" width="56" height="1" uuid="9f20cbfe-29c5-4ef4-8ca7-b6ac259ef337"/>
+				</line>
+			</frame>
+			<staticText>
+				<reportElement x="262" y="10" width="86" height="12" uuid="2d127936-2e35-4896-ae7b-f2e7d74c2489"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[COLEGIO PADRE ARRUPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="369" y="10" width="113" height="12" uuid="82a53494-c1b0-47a7-b691-fabaeb6dbb51"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRACION ACADEMICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="44" width="99" height="14" uuid="72e033fb-b8c1-4502-9d06-a665b66572d2"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[CODIGO DE COLECTOR 3051]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="27" width="58" height="12" uuid="510b1956-adbb-47ce-92dc-68cc58255a91"/>
+				<textElement>
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRICULA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="380" y="45" width="24" height="13" uuid="922defef-9fdf-4248-b398-a00b980be0f6"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[AÑO :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="10" width="86" height="12" uuid="550ce9ff-abc6-4a08-bd80-eadd5789acf4"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[COLEGIO PADRE ARRUPE]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="622" y="10" width="113" height="12" uuid="35f34662-15e7-45ba-987a-a39158f9c04d"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[ADMINISTRACION ACADEMICA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="514" y="44" width="99" height="14" uuid="c2ac145c-1d38-4625-baf1-1f6054c03d4e"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[CODIGO DE COLECTOR 3051]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="27" width="58" height="12" uuid="d6890eb5-5c01-4651-a732-a79e1a32b89e"/>
+				<textElement>
+					<font fontName="Calibri" size="8" isBold="true"/>
+				</textElement>
+				<text><![CDATA[MATRICULA:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="633" y="45" width="24" height="13" uuid="c687883e-f5ed-48e7-9648-52e4670e1003"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[AÑO :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="166" y="161" width="7" height="12" uuid="12cdb78f-b28c-4147-a218-2722cdc81046"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[$]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="262" y="58" width="220" height="121" uuid="9caf823b-8b4c-47e6-b7a4-9637e9e36f1c"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<image>
+					<reportElement x="66" y="13" width="82" height="105" uuid="2fac3b65-8f3e-41ef-b123-7fee63619837"/>
+					<imageExpression><![CDATA["C:\\NetBeans_JSFv1.0\\NetbeansProject\\CodBar\\web\\resources\\images\\arrupebw.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="3" y="1" width="44" height="15" uuid="4c5f760d-ccdd-4a66-a177-94c682635104"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APELLIDOS :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="21" width="220" height="1" uuid="c6a1130d-8171-41fa-a6f9-fa7238400c37"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="23" width="43" height="11" uuid="d5148a6a-1ea4-4531-8fab-d20f120a3d81"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NOMBRES: ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="42" width="220" height="1" uuid="c02fd726-c7f8-4742-ba6c-ee2b89ed41e5"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="43" width="43" height="12" uuid="fadca858-22cc-4fad-9c3c-078f06f8a9b6"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CURSO :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="62" width="220" height="1" uuid="7c878570-efac-45fc-b44e-4c4e70e3abde"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="68" width="43" height="12" uuid="695ef2b9-60dc-4366-98ec-97294d84b335"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[CUOTA :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="4" y="86" width="43" height="12" uuid="64c12372-2160-4df6-b54b-c4768cea1900"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[RECARGO :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="103" width="59" height="10" uuid="99e89bc9-3ab7-4b8d-8181-258df57a9e69"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[TOTAL A PAGAR :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="163" y="63" width="1" height="58" uuid="4f4df08f-fdc9-4726-ba21-2f1ea0ce01f2"/>
+				</line>
+				<line>
+					<reportElement x="49" y="74" width="99" height="1" uuid="1c3af435-1aa5-4582-af19-65abba7d3f4d"/>
+				</line>
+				<staticText>
+					<reportElement x="156" y="68" width="7" height="12" uuid="216e0c46-54b3-45f6-ba5c-0f3f9c02084f"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="156" y="86" width="7" height="12" uuid="12daae8a-546d-48e7-867f-7b04b9946508"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+				<line>
+					<reportElement x="49" y="91" width="99" height="1" uuid="ee8e11b2-504c-405a-8c9b-0c2bbe0f48b2"/>
+				</line>
+				<line>
+					<reportElement x="68" y="108" width="80" height="1" uuid="4cadcdae-3215-4773-8079-a5e0c2f0178a"/>
+				</line>
+				<line>
+					<reportElement x="164" y="82" width="56" height="1" uuid="473a370a-8258-45d5-9745-0e9fd754fad8"/>
+				</line>
+				<line>
+					<reportElement x="164" y="101" width="56" height="1" uuid="1bf1d1d3-9815-4640-96ad-232d07cc73d1"/>
+				</line>
+				<staticText>
+					<reportElement x="156" y="103" width="7" height="12" uuid="aff9bdca-5f25-4c8c-b078-f397b3ca251f"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="515" y="60" width="220" height="121" uuid="b93dedaf-be62-4e5a-9bfa-b0ff321fe015"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<image>
+					<reportElement x="66" y="13" width="82" height="105" uuid="e4bc6734-9b2e-4937-9d00-1d2f2f71a0ae"/>
+					<imageExpression><![CDATA["C:\\NetBeans_JSFv1.0\\NetbeansProject\\CodBar\\web\\resources\\images\\arrupebw.png"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="3" y="1" width="44" height="15" uuid="d1cfc2a4-5106-454b-a758-59d82fca83a4"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[APELLIDOS :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="21" width="220" height="1" uuid="44e48403-00a6-436a-a038-663a83123c03"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="23" width="43" height="11" uuid="45f11497-e295-43d9-8045-2d74743738e1"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[NOMBRES: ]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="42" width="220" height="1" uuid="45d8a625-1e58-42d5-a1c6-538c34e004b4"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="43" width="43" height="12" uuid="6744be17-d056-4697-aab9-d329c6cd58f9"/>
+					<textElement>
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[CURSO :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="62" width="220" height="1" uuid="1a218b3f-758b-41f8-a648-e857a1b5ebce"/>
+				</line>
+				<staticText>
+					<reportElement x="4" y="68" width="43" height="12" uuid="83e0173a-199e-4223-b40e-e31899da556e"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[CUOTA :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="4" y="86" width="43" height="12" uuid="c3f55a04-ec67-443a-b7e5-2e87f0281c28"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[RECARGO :]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="3" y="103" width="59" height="10" uuid="1a69cbc8-1984-4f64-ae23-f0fd002ddc89"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[TOTAL A PAGAR :]]></text>
+				</staticText>
+				<line>
+					<reportElement x="163" y="63" width="1" height="58" uuid="77138209-accd-4868-9915-d588b47add60"/>
+				</line>
+				<line>
+					<reportElement x="49" y="74" width="99" height="1" uuid="40426126-8c05-4fe3-a575-c3cb6e46d0e5"/>
+				</line>
+				<staticText>
+					<reportElement x="156" y="68" width="7" height="12" uuid="e7ad344f-d112-4808-9be3-19276b9a14c9"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="156" y="86" width="7" height="12" uuid="82ab624c-2de9-4ead-826c-2d74ec13afc1"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+				<line>
+					<reportElement x="49" y="91" width="99" height="1" uuid="1a19b527-3cc6-4fb9-9b82-1f66fc94c14f"/>
+				</line>
+				<line>
+					<reportElement x="68" y="108" width="80" height="1" uuid="e13f2164-1520-46df-9c1b-a1f66edd3317"/>
+				</line>
+				<line>
+					<reportElement x="164" y="82" width="56" height="1" uuid="00ab388f-ddea-46d3-8e6c-055ccdb87273"/>
+				</line>
+				<line>
+					<reportElement x="164" y="101" width="56" height="1" uuid="f1425ecd-8ae5-47a5-a8bc-a8b495923a32"/>
+				</line>
+				<staticText>
+					<reportElement x="157" y="103" width="7" height="12" uuid="f7cc3a23-b2a4-4c95-b2dd-f6c57bf7775f"/>
+					<textElement>
+						<font fontName="Calibri" size="8"/>
+					</textElement>
+					<text><![CDATA[$]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement x="10" y="180" width="120" height="13" uuid="5924d00e-e7e5-4893-bea5-2552c08454b1"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[CUENTA CORRIENTE 0101-20415]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="186" y="180" width="44" height="16" uuid="10edeed4-8785-4601-874b-804978818fa9"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[ALUMNO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="262" y="180" width="120" height="13" uuid="db37688e-bbbc-4e52-bdd5-b0403f6b41fa"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[CUENTA CORRIENTE 0101-20415]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="441" y="180" width="41" height="16" uuid="03dd8173-874b-4557-9dfe-2e44416a5cb5"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[COLEGIO]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="515" y="181" width="120" height="13" uuid="c7a914ad-810e-40c2-b304-cb31dcc31bfe"/>
+				<textElement>
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<text><![CDATA[CUENTA CORRIENTE 0101-20415]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="693" y="181" width="42" height="16" uuid="59cbe14d-1542-4551-8544-a467294e15be"/>
+				<textElement>
+					<font fontName="Calibri"/>
+				</textElement>
+				<text><![CDATA[CAJERO]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="21" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="23" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="21" splitType="Stretch"/>
+	</summary>
+</jasperReport>
