@@ -12,9 +12,16 @@
         Hello from Facelets
         <br />
         <h:form> 
-            <p:commandButton action="#{talonariosBeans.preba()}"  />
+            <p:inputText id="inAlumnoSolicitudNumero"  value="#{talonariosBeans.alumnoSolicitudNumeroL}" >
+                <p:ajax event="keyup" update="outAlumnoSolicitudNumero" />
+                <p:watermark for="inAlumnoSolicitudNumero" value=" ************************ " transient="true" />
+            </p:inputText>
+            <p:inputText id="outAlumnoSolicitudNumero" value="#{talonariosBeans.alumnoSolicitudNumeroL}" rendered="#{sociosAlumnosBean.alumnoSolicitudNumeroL eq 'HHIIDDEENN'}" />
+            
+            <p:commandButton action="#{talonariosBeans.creargs1()}"  />
+
         </h:form>
-        
+
     </h:body>
 </html>
 
