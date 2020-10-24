@@ -13,19 +13,21 @@ import java.io.Writer;
 @SessionScoped
 public class talonariosBeans implements Serializable {
 
-//    private String inputContent = "Regueton";
-    private String alumnoSolicitudNumeroL = "-";
+//    private String inputContent = "abc";
+    private String documento = "-";
 
     public talonariosBeans() {
     }
 
-    public String getAlumnoSolicitudNumeroL() {
-        return alumnoSolicitudNumeroL;
+    public String getDocumento() {
+        return documento;
     }
 
-    public void setAlumnoSolicitudNumeroL(String alumnoSolicitudNumeroL) {
-        this.alumnoSolicitudNumeroL = alumnoSolicitudNumeroL;
+    public void setDocumento(String documento) {
+        this.documento = documento;
     }
+
+
 
     public void creargs1() {
         try {
@@ -50,7 +52,7 @@ public class talonariosBeans implements Serializable {
         Writer writer = new FileWriter("C:\\barcodegs1\\outputOne.txt");
 
         try {
-            writer.write(alumnoSolicitudNumeroL);
+            writer.write(documento);
         } finally {
             writer.close();
         }

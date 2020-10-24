@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="792" pageHeight="612" orientation="Landscape" columnWidth="752" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e52eb574-7eae-4008-9bd1-1ca2e9495462">
 	<property name="ireport.zoom" value="2.357947691000006"/>
-	<property name="ireport.x" value="597"/>
-	<property name="ireport.y" value="273"/>
+	<property name="ireport.x" value="157"/>
+	<property name="ireport.y" value="0"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -60,10 +60,6 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<image>
-					<reportElement x="66" y="13" width="82" height="105" uuid="47125980-8902-412f-b2ce-3e405ef04ba6"/>
-					<imageExpression><![CDATA["C:\\NetBeans_JSFv1.0\\NetbeansProject\\CodBar\\web\\resources\\images\\arrupebw.png"]]></imageExpression>
-				</image>
 				<staticText>
 					<reportElement x="3" y="1" width="44" height="15" uuid="885fc2e7-6586-4402-8a09-1807b52bea00"/>
 					<textElement>
@@ -233,10 +229,6 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<image>
-					<reportElement x="66" y="13" width="82" height="105" uuid="2fac3b65-8f3e-41ef-b123-7fee63619837"/>
-					<imageExpression><![CDATA["C:\\NetBeans_JSFv1.0\\NetbeansProject\\CodBar\\web\\resources\\images\\arrupebw.png"]]></imageExpression>
-				</image>
 				<staticText>
 					<reportElement x="3" y="1" width="44" height="15" uuid="4c5f760d-ccdd-4a66-a177-94c682635104"/>
 					<textElement>
@@ -336,10 +328,6 @@
 					<bottomPen lineWidth="1.0"/>
 					<rightPen lineWidth="1.0"/>
 				</box>
-				<image>
-					<reportElement x="66" y="13" width="82" height="105" uuid="e4bc6734-9b2e-4937-9d00-1d2f2f71a0ae"/>
-					<imageExpression><![CDATA["C:\\NetBeans_JSFv1.0\\NetbeansProject\\CodBar\\web\\resources\\images\\arrupebw.png"]]></imageExpression>
-				</image>
 				<staticText>
 					<reportElement x="3" y="1" width="44" height="15" uuid="d1cfc2a4-5106-454b-a758-59d82fca83a4"/>
 					<textElement>

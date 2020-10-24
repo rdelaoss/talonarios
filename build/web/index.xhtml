@@ -12,13 +12,13 @@
         Hello from Facelets
         <br />
         <h:form> 
-            <p:inputText id="inAlumnoSolicitudNumero"  value="#{talonariosBeans.alumnoSolicitudNumeroL}" >
-                <p:ajax event="keyup" update="outAlumnoSolicitudNumero" />
-                <p:watermark for="inAlumnoSolicitudNumero" value=" ************************ " transient="true" />
+            <p:inputText id="inDocumento"  value="#{talonariosBeans.documento}" >
+                <p:ajax event="keyup" update="outDocumento" />
+                <p:watermark for="inDocumento" value=" ************************ " transient="true" />
             </p:inputText>
-            <p:inputText id="outAlumnoSolicitudNumero" value="#{talonariosBeans.alumnoSolicitudNumeroL}" rendered="#{sociosAlumnosBean.alumnoSolicitudNumeroL eq 'HHIIDDEENN'}" />
+            <p:inputText id="outDocumento" value="#{talonariosBeans.documento}" rendered="#{talonariosBeans.documento eq 'HHIIDDEENN'}" />
             
-            <p:commandButton action="#{talonariosBeans.creargs1()}"  />
+            <p:commandButton action="#{talonariosBeans.creargs1()}" value="ENTER" />
 
         </h:form>
 
