@@ -51,7 +51,7 @@ public class talonariosBeans implements Serializable {
 
     @PostConstruct
     public void init() {
-        imprimir2();
+//        imprimir2();
     }
 
     public String getDocumento() {
@@ -251,16 +251,16 @@ public class talonariosBeans implements Serializable {
         }
         System.out.println("valor -> " + valor);
 
-        for (model_talonario objtalonario : talonarios) {
-            System.out.println("carnet : " + objtalonario.getCarnet()
-                    + " nombre : " + objtalonario.getNombre() + " "
-                    + "apellido : " + objtalonario.getApellido()
-                    + " cuota : " + objtalonario.getCuota()
-                    + " mes : " + objtalonario.getMes()
-                    + " grado : " + objtalonario.getGrado()
-                    + " mora : " + objtalonario.getMora()
-            );
-        }
+//        for (model_talonario objtalonario : talonarios) {
+//            System.out.println("carnet : " + objtalonario.getCarnet()
+//                    + " nombre : " + objtalonario.getNombre() + " "
+//                    + "apellido : " + objtalonario.getApellido()
+//                    + " cuota : " + objtalonario.getCuota()
+//                    + " mes : " + objtalonario.getMes()
+//                    + " grado : " + objtalonario.getGrado()
+//                    + " mora : " + objtalonario.getMora()
+//            );
+//        }
     }
 
 }

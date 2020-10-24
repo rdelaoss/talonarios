@@ -9,16 +9,49 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
-        <br />
         <h:form> 
             <p:inputText id="inDocumento"  value="#{talonariosBeans.documento}" >
                 <p:ajax event="keyup" update="outDocumento" />
                 <p:watermark for="inDocumento" value=" ************************ " transient="true" />
             </p:inputText>
             <p:inputText id="outDocumento" value="#{talonariosBeans.documento}" rendered="#{talonariosBeans.documento eq 'HHIIDDEENN'}" />
-            
+
             <p:commandButton action="#{talonariosBeans.creargs1()}" value="ENTER" />
+
+            <p:dataTable var="col" 
+                         value="#{talonariosBeans.listado}"
+                         id="tablaItem"
+                         widgetVar="widgetTabla" 
+                         selectionMode="single" 
+                         rowKey="#{col.getPersonaId().getPersonaId()}" 
+                         emptyMessage="No hay registros que mostrar." 
+                         rows="15" 
+                         rowsPerPageTemplate="5, 10, 15, 50" 
+                         paginator="true" 
+                         paginatorPosition="bottom"
+                         paginatorTemplate="{CurrentPageReport} {FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}" 
+                         rendered="true" 
+                         style="margin: 15px;"
+                         tableStyle="table-layout: auto;"
+                         >
+                
+                <p:column headerText="Carnet">
+                    <h:outputText value="#{col.getPersonaId().getPersonaId()}" />
+                </p:column>
+                
+                <p:column headerText="Nombres">
+                    <h:outputText value="#{col.getPersonaId().getPersonaNombre()}" />
+                </p:column>
+
+                <p:column headerText="Apellidos">
+                    <h:outputText value="#{col.getPersonaId().getPersonaApellidos()}" />
+                </p:column>
+                
+                <p:column headerText="Grado">
+                    <h:outputText value="#{col.getMatriculaList().get(0).getConfiguracionGradoId().getGradoId().getGradoNombre()}" />
+                </p:column>
+                
+            </p:dataTable>
 
         </h:form>
 
