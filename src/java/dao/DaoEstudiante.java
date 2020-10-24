@@ -30,12 +30,10 @@ import javax.transaction.UserTransaction;
  */
 public class DaoEstudiante implements Serializable {
 
-    public DaoEstudiante(UserTransaction utx, EntityManagerFactory emf) {
-        this.utx = utx;
+    public DaoEstudiante(EntityManagerFactory emf) {
         this.emf = emf;
     }
-    private UserTransaction utx = null;
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("TalonariosPU");
+    private EntityManagerFactory emf =null;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
@@ -61,7 +59,7 @@ public class DaoEstudiante implements Serializable {
         }
         EntityManager em = null;
         try {
-            utx.begin();
+            em.getTransaction().begin();
             em = getEntityManager();
             Persona personaId = estudiante.getPersonaId();
             if (personaId != null) {
@@ -88,10 +86,10 @@ public class DaoEstudiante implements Serializable {
                     oldEstudianteIdOfMatriculaListMatricula = em.merge(oldEstudianteIdOfMatriculaListMatricula);
                 }
             }
-            utx.commit();
+            em.getTransaction().commit();
         } catch (Exception ex) {
             try {
-                utx.rollback();
+                em.getTransaction().rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
             }
@@ -109,7 +107,7 @@ public class DaoEstudiante implements Serializable {
     public void edit(Estudiante estudiante) throws IllegalOrphanException, NonexistentEntityException, RollbackFailureException, Exception {
         EntityManager em = null;
         try {
-            utx.begin();
+            em.getTransaction().begin();
             em = getEntityManager();
             Estudiante persistentEstudiante = em.find(Estudiante.class, estudiante.getEstudianteId());
             Persona personaIdOld = persistentEstudiante.getPersonaId();
@@ -168,10 +166,10 @@ public class DaoEstudiante implements Serializable {
                     }
                 }
             }
-            utx.commit();
+            em.getTransaction().commit();
         } catch (Exception ex) {
             try {
-                utx.rollback();
+                em.getTransaction().rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
             }
@@ -193,7 +191,7 @@ public class DaoEstudiante implements Serializable {
     public void destroy(Integer id) throws IllegalOrphanException, NonexistentEntityException, RollbackFailureException, Exception {
         EntityManager em = null;
         try {
-            utx.begin();
+            em.getTransaction().begin();
             em = getEntityManager();
             Estudiante estudiante;
             try {
@@ -219,10 +217,10 @@ public class DaoEstudiante implements Serializable {
                 personaId = em.merge(personaId);
             }
             em.remove(estudiante);
-            utx.commit();
+            em.getTransaction().commit();
         } catch (Exception ex) {
             try {
-                utx.rollback();
+                em.getTransaction().rollback();
             } catch (Exception re) {
                 throw new RollbackFailureException("An error occurred attempting to roll back the transaction.", re);
             }
