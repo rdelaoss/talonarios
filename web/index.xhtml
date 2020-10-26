@@ -25,7 +25,7 @@
                          selectionMode="single" 
                          rowKey="#{col.getPersonaId().getPersonaId()}" 
                          emptyMessage="No hay registros que mostrar." 
-                         rows="15" 
+                         rows="10" 
                          rowsPerPageTemplate="5, 10, 15, 50" 
                          paginator="true" 
                          paginatorPosition="bottom"
@@ -34,11 +34,10 @@
                          style="margin: 15px;"
                          tableStyle="table-layout: auto;"
                          >
-                
                 <p:column headerText="Carnet">
                     <h:outputText value="#{col.getPersonaId().getPersonaId()}" />
                 </p:column>
-                
+
                 <p:column headerText="Nombres">
                     <h:outputText value="#{col.getPersonaId().getPersonaNombre()}" />
                 </p:column>
@@ -46,11 +45,11 @@
                 <p:column headerText="Apellidos">
                     <h:outputText value="#{col.getPersonaId().getPersonaApellidos()}" />
                 </p:column>
-                
+
                 <p:column headerText="Grado">
                     <h:outputText value="#{col.getMatriculaList().get(0).getConfiguracionGradoId().getGradoId().getGradoNombre()}" />
                 </p:column>
-                
+
             </p:dataTable>
 
         </h:form>
